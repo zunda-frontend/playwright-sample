@@ -22,13 +22,13 @@ pnpm i
 
 ## 3. テスト実行
 
-playwright でのテスト実行として、以下 2 つのコマンドを使うことができます。
+playwright でのテスト実行として、以下 2 つのコマンドを用意しています。
 お好みの方をお使いください。
 
 ```bash
-pnpm playwright test # CLI上でテストを実施します
+pnpm e2e-test # CLI上でテストを実施します
 ```
 
 ```bash
-pnpm playwright test --ui # GUI上でテストを実施します
+pnpm e2e-test:ui # GUI上でテストを実施します
 ```

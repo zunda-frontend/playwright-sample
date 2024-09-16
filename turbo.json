@@ -13,6 +13,14 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "e2e-test": {
+      "cache": false,
+      "dependsOn": ["^build"]
+    },
+    "e2e-test:ui": {
+      "cache": false,
+      "dependsOn": ["^build"]
     }
   }
 }

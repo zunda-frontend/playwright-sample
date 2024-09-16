@@ -1,5 +1,5 @@
 {
-  "name": "playwright-sample",
+  "name": "sample-app",
   "license": "MIT",
   "version": "0.1.0",
   "private": true,
@@ -8,8 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "playwright test": "playwright test",
-    "playwright test:ui": "playwright test:ui"
+    "check-types": "tsc --noEmit",
+    "e2e-test": "playwright test",
+    "e2e-test:ui": "playwright test --ui"
   },
   "dependencies": {
     "next": "14.2.11",
@@ -17,13 +18,13 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@playwright/test": "^1.47.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@playwright/test": "^1.47.1"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {

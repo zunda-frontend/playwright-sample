@@ -1,11 +1,13 @@
 {
-  "name": "my-turborepo",
+  "name": "playwright-sample",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "e2e-test": "turbo run e2e-test",
+    "e2e-test:ui": "turbo run e2e-test:ui"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
