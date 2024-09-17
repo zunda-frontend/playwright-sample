@@ -45,6 +45,10 @@
   list-style-position: inside;
 }
 
+.main li:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
 .main code {
   font-family: inherit;
   background: var(--gray-alpha-100);
@@ -160,12 +164,39 @@ a.secondary {
   }
 }
 
-.playwright {
-  margin-top: 32px;
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 64px;
 }
 
-.link {
-  color: #1a0dab;
+.messageWrapper {
+  margin-block: 32px;
+  text-align: center;
+  height: 24px;
   font-weight: bold;
-  text-decoration: underline;
+}
+
+.submitMessage {
+  color: #008000;
+}
+
+.errorMessage {
+  color: #ff0000;
+}
+
+.submitButton {
+  width: 260px;
+  height: 30px;
+}
+
+.inputWrapper {
+  display: flex;
+  column-gap: 16px;
+}
+
+.input {
+  padding-inline: 8px;
+  padding-block: 4px;
 }

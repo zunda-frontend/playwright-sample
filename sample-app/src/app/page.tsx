@@ -1,95 +1,46 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
+        <h1>トップページ</h1>
+        <p>これは playwright のテストを書くためのサンプルアプリです。</p>
+        <p>以下のテストを書いてみましょう。</p>
+        <ul>
           <li>
-            Get started by editing <code>src/app/page.tsx</code>.
+            ヘッダーに「ページA」というリンクがあり、押すとページAへ遷移すること
           </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          <li>
+            ヘッダーに「ページB」というリンクがあり、押すとページBへ遷移すること
+          </li>
+          <li>
+            ヘッダーに Next.js
+            のロゴ画像があり、押すとトップページへ遷移すること
+          </li>
+          <li>
+            ページAで、非同期（表示にラグがある）なデータが正しく取得できた場合に想定された文言が表示されること
+          </li>
+          <li>
+            ページBで、フォームを正しく送信できた場合に「送信されました」と表示されること
+          </li>
+          <li>
+            ページBで、コメントを空で送信した場合に「コメントは必須項目です」と表示されること
+          </li>
+        </ul>
+        <span className={styles.playwright}>
+          わからない場合は{" "}
+          <Link
+            className={styles.link}
             target="_blank"
-            rel="noopener noreferrer"
+            href="https://playwright.dev/docs/writing-tests"
           >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+            playwright 公式ドキュメント
+          </Link>{" "}
+          を参考にしてみても良いかもしれません！
+        </span>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
