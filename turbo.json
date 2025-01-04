@@ -19,7 +19,9 @@
       "dependsOn": ["^build"]
     },
     "e2e-test:ui": {
+      "env": ["DISPLAY"],
       "cache": false,
+      "persistent": true,
       "dependsOn": ["^build"]
     }
   }
